@@ -1,0 +1,6 @@
+# 忽略以下文件
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# 忽略迁移文件的编译缓存（如 .pyc）
+**/migrations/*.pyc
