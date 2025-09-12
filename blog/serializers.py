@@ -30,3 +30,10 @@ class ArticleStatsSerializer(serializers.ModelSerializer):
         model = ArticleReadStats
         fields = ['id', 'article', 'article_title', 'total_reads', 'total_visitors', 'update_time']
         read_only_fields = ['id', 'update_time']
+
+
+class CacheMetricsSerializer(serializers.Serializer):
+    """缓存指标序列化器"""
+    hit_rate = serializers.FloatField()
+    hits = serializers.IntegerField()
+    misses = serializers.IntegerField()
